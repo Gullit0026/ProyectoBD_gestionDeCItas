@@ -1,0 +1,102 @@
+{
+  "operations": [
+
+    {
+      "insertOne": {
+        "document": {
+          "patient": {
+            "doc": "1122334455",
+            "firstName": "CARLOS",
+            "lastName": "MENDOZA",
+            "birthDate": {
+              "$date": "1990-07-15T00:00:00.000Z"
+            },
+            "phoneNumber": "3155551234"
+          },
+          "doctor": {
+            "doc": "5566778899",
+            "firstName": "LAURA",
+            "lastName": "GOMEZ",
+            "specialty": "pediatría",
+            "phoneNumber": "3209876543"
+          },
+          "date": {
+            "$date": "2024-10-10T09:30:00.000Z"
+          },
+          "reason": "consulta pediátrica de control"
+        }
+      },
+      "collection": "Appointments"
+    },
+
+    {
+      "updateOne": {
+        "filter": {
+          "_id": {
+            "$oid": "6703697a6a51ddab5183a800"
+          }
+        },
+        "update": {
+          "$set": {
+            "date": {
+              "$date": "2024-10-15T10:00:00.000Z"
+            }
+          }
+        }
+      },
+      "collection": "Appointments"
+    },
+
+    {
+      "findOne": {
+        "filter": {
+          "_id": {
+            "$oid": "6703697a6a51ddab5183a800"
+          }
+        }
+      },
+      "collection": "Appointments"
+    },
+
+    {
+      "deleteOne": {
+        "filter": {
+          "_id": {
+            "$oid": "6703697a6a51ddab5183a800"
+          }
+        }
+      },
+      "collection": "Appointments"
+    },
+
+
+
+    {
+      "insertOne": {
+        "document": {
+          "patient": {
+            "doc": "123456789",
+            "firstName": "VALERIA",
+            "lastName": "POLANCO",
+            "birthDate": {
+              "$date": "1980-01-01T00:00:00.000Z"
+            },
+            "phoneNumber": "3201231231231"
+          },
+          "doctor": {
+            "doc": "987654321",
+            "firstName": "JANE",
+            "lastName": "SMITH",
+            "specialty": "cardiología",
+            "phoneNumber": "3203213213"
+          },
+          "date": {
+            "$date": "2024-04-01T15:00:00.000Z"
+          },
+          "reason": "control de rutina"
+        }
+      },
+      "collection": "Appointments"
+    }
+  ]
+}

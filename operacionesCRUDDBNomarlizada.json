@@ -1,0 +1,121 @@
+{
+    "operations": [
+    {
+        "insertOne": {
+        "document": {
+            "doc": "1122334455",
+            "firstName": "CARLOS",
+            "lastName": "MENDOZA",
+            "birthDate": {
+            "$date": "1990-07-15T00:00:00.000Z"
+            },
+            "phoneNumber": "3155551234"
+        }
+        },
+        "collection": "Patients"
+    },
+
+    {
+        "insertOne": {
+        "document": {
+            "doc": "5566778899",
+            "firstName": "LAURA",
+            "lastName": "GOMEZ",
+            "specialty": "pediatría",
+            "phoneNumber": "3209876543"
+        }
+        },
+        "collection": "Doctors"
+    },
+
+    {
+        "insertOne": {
+        "document": {
+            "doctorId": {
+            "$oid": "670364b6b937728e7e5770c0"  
+            },
+            "patientId": {
+            "$oid": "6703649efcf8a78968c78bb8"  
+            },
+            "date": {
+            "$date": "2024-10-10T15:00:00.000Z"
+            },
+            "reason": "prueba 1"
+        }
+        },
+        "collection": "Appointments"
+    },
+
+    {
+        "updateOne": {
+        "filter": {
+            "doc": "123456789"  
+        },
+        "update": {
+            "$set": {
+            "phoneNumber": "3209876543"  
+            }
+        }
+        },
+        "collection": "Patients"
+    },
+
+    {
+        "findOne": {
+        "filter": {
+            "doc": "987654321"  
+        }
+        },
+        "collection": "Doctors"
+    },
+
+    {
+        "deleteOne": {
+        "filter": {
+            "_id": {
+            "$oid": "670364f0c9d244b7f5bf35e2"  
+            }
+        }
+        },
+        "collection": "Appointments"
+    },
+
+    {
+        "findOne": {
+        "filter": {
+            "doctorId": "670251169f4782584a74702e"  
+        }
+        },
+        "collection": "Appointments"
+    },
+
+    {
+        "findOne": {
+        "filter": {
+            "patientId": "6702524c9f4782584a747051"  
+        }
+        },
+        "collection": "Appointments"
+    },
+
+
+
+
+    {
+        "_id": {
+          "$oid": "670364f0c9d244b7f5bf35e2"
+        },
+        "doctorId": {
+          "$oid": "670364b6b937728e7e5770c5"
+        },
+        "patientId": {
+          "$oid": "6703649efcf8a78968c78bbd"
+        },
+        "date": {
+          "$date": "2024-04-06T18:00:00.000Z"
+        },
+        "reason": "examen de rutina"
+      }
+
+    ]
+}
